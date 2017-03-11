@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>筛子</title>
+</head>
+ <style>
+     ul,li{
+         list-style: none;
+     }
+     *{
+         margin: 0;
+         padding: 0;
+     }
+     @keyframes aa{
+         0%{background:whitesmoke}
+         33%{background: yellow}
+         66%{background: yellowgreen}
+         100%{background: green}
+     }
+     @keyframes bbb {
+         0%{
+             background: -webkit-radial-gradient(center , circle cover,rgb(115, 166, 89) 43% , rgb(136, 42, 6) 64%);
+         }
+         50%{
+             background: -webkit-radial-gradient(center , circle cover ,rgb(227, 221, 91) 43% , rgb(136, 42, 6) 64%);
+         }
+         100%{
+             background: -webkit-radial-gradient(center , circle cover ,rgba(93, 126, 223, 0.74902) 43% , rgb(136, 42, 6) 64%);
+         }
+     }
+     body{
+        height: 500px;
+         transition: all 5s;
+         animation:  bbb 2s 1s ease  infinite;
+
+     }
+     /*制作的筛子*/
+     ul{
+         height: 100%;
+         width: 100%;
+         background: brown;
+         animation: bodyback, 3s, 1s, infinite;
+         display: inline-block;
+         display: flex;
+         float: left;
+         box-sizing: border-box;
+         border-radius: 8px;
+     }
+     li{
+         width: 15px;
+         height: 15px;
+         background: black;
+         border-radius: 100%;
+     }
+
+     ul:nth-child(1) {
+         justify-content: center;
+         align-items: center;
+     }
+     ul:nth-child(2) {
+         justify-content: space-around;
+
+
+     }
+     ul:nth-child(2)  li{
+
+         margin: 25px 5px;
+
+     }
+     ul:nth-child(2)  li:nth-child(2){
+         align-self: flex-end;
+
+
+     }
+     ul:nth-child(3) {
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+
+     }
+     ul:nth-child(3)  li {
+         margin:  9px ;
+     }
+     ul:nth-child(3)  li:nth-child(1){
+         align-self: flex-start;
+
+
+     }
+     ul:nth-child(3)  li:nth-child(3){
+         align-self: flex-end;
+
+
+     }
+     ul:nth-child(4) {
+         flex-wrap: wrap;
+         justify-content: space-around;
+         align-content: center;
+
+     }
+     ul:nth-child(4)  li {
+         margin:  16px 16px;
+     }
+     ul:nth-child(5) {
+         flex-wrap: wrap;
+         justify-content: space-around;
+         align-content: center;
+
+     }
+     ul:nth-child(5)  li {
+         margin: -10px 15px;
+         flex-wrap: wrap;
+     }
+     ul:nth-child(5)  li:nth-child(3) {
+         align-content: center;
+         margin: 20px 30px;
+     }
+     ul:nth-child(6) {
+         flex-wrap: wrap;
+         justify-content: space-around;
+
+     }
+     ul:nth-child(6)  li {
+         margin: 9px 10px;
+     }
+     /*筛子包装*/
+     ul{
+         position: absolute;
+     }
+     body{
+         perspective: 5000px;
+
+     }
+     main{
+         transform-style: preserve-3d;
+         width: 100px;
+         height: 100px;
+         position: relative;
+         float: left;
+         transition: all 1s;
+         margin: 150px 150px;
+     }
+     ul:nth-child(1){
+         transform: translateZ(50px);
+     }
+     ul:nth-child(3){
+         transform:  translateZ(-50px) ;
+     }
+     ul:nth-child(2){
+         transform:  rotateY(90deg) translateZ(50px) ;
+     }
+     ul:nth-child(4){
+         transform:  rotateY(-90deg) translateZ(50px) ;
+     }
+     ul:nth-child(5){
+         transform:  rotateX(90deg) translateZ(50px) ;
+     }
+     ul:nth-child(6){
+         transform:  rotatex(-90deg) translateZ(50px) ;
+     }
+
+     main:hover{
+         transform: rotateY(450deg) rotateX(450deg);
+     }
+     main:nth-child(1){
+         left: 0px;
+         top:100px;
+     }
+     main:nth-child(2){
+         left: 0px;
+         top:100px;
+     }
+     main:nth-child(3){
+         left: 0px;
+         top:100px;
+     }
+     #btn{
+         width: 100%;
+         height: 50px;
+         position: absolute;
+         background: seagreen;
+         text-align: center;
+         line-height: 50px;
+         font-weight: 700;
+     }
+     @keyframes bodyback {
+         0%{
+             background: linear-gradient(top , rgb(115, 166, 89) 43% , rgb(136, 42, 6) 64%);
+         }
+         50%{
+             background: linear-gradient(top , rgb(227, 221, 91) 43% , rgb(136, 42, 6) 64%);
+         }
+         100%{
+             background: linear-gradient(top , rgba(93, 126, 223, 0.74902) 43% , rgb(136, 42, 6) 64%);
+         }
+     }
+
+ </style>
+
+<body>
+
+<button id="btn">开打开打!!!!</button>
+<main>
+    <ul class="a1">
+        <li></li>
+    </ul>
+    <ul class="a2">
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a3">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a4">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a5">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a6">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</main>
+<main>
+    <ul class="a1">
+        <li></li>
+    </ul>
+    <ul class="a2">
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a3">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a4">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a5">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a6">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</main>
+<main>
+    <ul class="a1">
+        <li></li>
+    </ul>
+    <ul class="a2">
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a3">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a4">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a5">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a6">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</main>
+
+</body>
+<script>
+        var btn=document.getElementById("btn");
+        var sai=document.getElementsByTagName("main");
+        btn.onclick=function(){
+            for(var i=0;i<sai.length;i++){
+                var nu=Math.ceil(Math.random()*10*Math.random()*10 )*90
+                var nb=Math.ceil(Math.random()*10*Math.random()*10+6 )*90
+                var wz=Math.ceil(Math.random()*10 )*90
+                sai[i].style.transform="rotateX("+nu+"deg) rotateY("+nb+"deg) "
+                sai[i].style.left=""+nb/9+"px"
+                sai[i].style.top=""+nb/10+"px"
+
+
+            }
+
+
+        }
+//        document.body.onclick=function(){
+//
+//            document.body.style.transform="rotateZ(180deg) translatez(500px)"
+//
+//        }
+
+</script>
+</html>

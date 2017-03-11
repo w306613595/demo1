@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>筛子</title>
+</head>
+ <style>
+     ul,li{
+         list-style: none;
+     }
+     *{
+         margin: 0;
+         padding: 0;
+     }
+     ul{
+         height: 100px;
+         width: 100px;
+         background: brown;
+         display: inline-block;
+         display: flex;
+         float: left;
+
+         /*padding: 20px;*/
+         box-sizing: border-box;
+     }
+     li{
+         width: 15px;
+         height: 15px;
+         background: black;
+         border-radius: 100%;
+     }
+
+     ul:nth-child(1) {
+         justify-content: center;
+         align-items: center;
+     }
+     ul:nth-child(2) {
+         /*flex-direction: column;*/
+         justify-content: space-around;
+
+
+     }
+     ul:nth-child(2)  li{
+
+         margin: 25px 5px;
+
+     }
+     ul:nth-child(2)  li:nth-child(2){
+         align-self: flex-end;
+
+
+     }
+     ul:nth-child(3) {
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+
+     }
+     ul:nth-child(3)  li {
+         margin:  9px ;
+     }
+     ul:nth-child(3)  li:nth-child(1){
+         align-self: flex-start;
+
+
+     }
+     ul:nth-child(3)  li:nth-child(3){
+         align-self: flex-end;
+
+
+     }
+     ul:nth-child(4) {
+         flex-wrap: wrap;
+         justify-content: space-around;
+         align-content: center;
+
+     }
+     ul:nth-child(4)  li {
+       margin:  16px 16px;
+     }
+     ul:nth-child(5) {
+         flex-wrap: wrap;
+         justify-content: space-around;
+         align-content: center;
+
+     }
+     ul:nth-child(5)  li {
+         margin: -10px 15px;
+         flex-wrap: wrap;
+     }
+     ul:nth-child(5)  li:nth-child(3) {
+         align-content: center;
+         margin: 20px 30px;
+     }
+     ul:nth-child(6) {
+         flex-wrap: wrap;
+         justify-content: space-around;
+
+     }
+     ul:nth-child(6)  li {
+         margin: 9px 10px;
+     }
+
+ </style>
+
+<body>
+<main>
+    <ul class="a1">
+        <li></li>
+    </ul>
+    <ul class="a2">
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a3">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a4">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a5">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="a6">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</main>
+</body>
+</html>
